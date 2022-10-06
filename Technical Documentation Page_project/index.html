@@ -1,82 +1,127 @@
-<html>
-<!--This example uses the default bootstrap stylesheet-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <!--This example uses the default bootstrap stylesheet-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    
+</head>
+        <body>
 <!--provides a full-width container that can expand or collapse based on the size of viewport-->
 <div class="container-fluid">
    <div class="row">
-       <div class="col-md-2 col-sm-12 col-xs-12">
+       <div class="col-md-2 col-sm-12 col-xs-12 bg-dark">
            <nav id="navbar">
-               <h3>Technical Documentation</h3>
-               <!--content stacking for smaller screens-->
-               <ul class="nav nav-pills nav-stacked">
-                <!--internal linking to the respective sections-->
-                   <a class="nav-link" href="#Introduction" rel="internal">
-                       <li>Introduction</li>
-                   </a>
-                   <a class="nav-link" href="#What_you_should_already_know" rel="internal">
-                       <li>What you should already know</li>
-                   </a>
-                   <a class="nav-link" href="#About_Topic" rel="internal">
-                       <li>About the topic</li>
-                   </a>
-                   <a class="nav-link" href="#Topic_1" rel="internal">
-                       <li>Topic 1</li>
-                   </a>
-                   <a class="nav-link" href="#Topic_2" rel="internal">
-                       <li>Topic 2</li>
-                   </a>
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                  <span class="fs-4">Technical Documentation</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                  <li class="nav-item">
+                    <a href="#Introduction" class="nav-link active" aria-current="page">
+                      Introduction
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#What_you_should_already_know" class="nav-link text-white" rel="internal">
+                      What you should already know
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#About_Topic" class="nav-link text-white" rel="internal">
+                      About the topic
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#Topic_1" class="nav-link text-white" rel="internal">
+                     Topic 1
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#Topic_2" class="nav-link text-white" rel="internal">
+                      Topic 2
+                    </a>
+                  </li>
                 </ul>
-           </nav>
+              </div>
+          </nav>
        </div>
+       
        <div class="col-md-10 col-sm-12 col-xs-12">
            <main id="main-doc">
                <section class="main-section" id="Introduction" >
-                <!--basic styling for the headings, better practice to do the same in a css file as the styling is same for all headers-->
-                   <h3 style = "background: black; color: white">Introduction</h3>
-                   <article>
-                   <p>Some content about the main topic, for example Java documentation introduction about the language
-                       </article>
-               </section>
+                   <!-- Using Bootstrap's Jumbotron for Introduction section -->
+                <div class="p-5 mt-4 mb-4 bg-light rounded-3">
+                    <div class="container-fluid py-5">
+                      <h1 class="display-5 fw-bold">Introduction</h1>
+                      <p class="col-md-8 fs-4">Some content about the main topic, for example Java documentation introduction about the language</p>
+                    </div>
+                  </div>
+                </section>
+
                <section class="main-section" id="What_you_should_already_know">
-                   <h3 style = "background: black; color: white">What you should already know</h3>
-                   <article>
-                       <p>Background information before getting into the topic:</p>
-<!--creating list using html-->
-                       <li>Some list content</li>
-                       <li>Prerequisites.</li>
-                       <li>Workings and assumptions</li>
-                       <p>Any other content to be covered before learning this topic</p>
-                       </artice>
+                <div class="card mb-3">
+                   <div class="card-body">
+                      <h5 class="card-title">What you should already know</h5>
+                      <p class="card-text">Background information before getting into the topic:</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Some list content</li>
+                      <li class="list-group-item">Some list content</li>
+                      <li class="list-group-item">Workings and assumptions</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link">Additonal resources link 1</a>
+                      <a href="#" class="card-link">Additonal resources link 2</a>
+                    </div>
+                  </div>
+                </section>
+                
+                <section class="main-section" id="About_Topic">
+                <div class="card border-info mb-3">
+                    <div class="card-header bg-info">About topic</div>
+                    <div class="card-body">
+                      <p class="card-text">More lines about the topic. For example, how the basic functionality works, features etc...</p>
+                      <p class="card-text">Technical documentation should be thorough and to the point</p>
+                      <p class="card-text">Write about features, comparisons with other languages etc</p>
+                    </div>
+                  </div>
                </section>
-               <section class="main-section" id="About_Topic">
-                   <h3 style = "background: black; color: white">About topic</h3>
-                   <article>
-                       <p>More lines about the topic. For example, how the basic functionality works, features etc...</p>
-                       <p>
-                       Technical documentation should be thorough and to the point
-                       </p>
-                       <p>
-                       Write about features, comparisons with other languages etc
-                       </p>
-                   </article>
-               </section>
+
                <section class="main-section" id="Topic_1">
-                   <h3 style = "background: black; color: white">Topic 1</h3>
-                   <article>
-                       Getting started with the actual documentation content
-                       <code>This would come in a different color and font indicating lines of code
-                       </code>
-                   </article>
-               </section>
-               <section class="main-section" id="Topic_2">
-                   <h3 style = "background: black; color: white">Topic 2</h3>
-                   <p>
-Another topic about the main topic, for example, if the topic is Java, this could be variables or data types in Java
-                   </p>
-               </section>
-           </main>
+                <div class="card border-dark mb-3">
+                    <div class="card-header">Topic 1</div>
+                    <div class="card-body">
+                      <p class="card-text">Getting started with the actual documentation content</p>
+                      <p class="card-text"> <code>&lt;p&gt;This would come in a different color and font indicating lines of code&lt;/p&gt;
+                    </code></p>
+                     
+                    </div>
+                  </div>
+                </section>
+                <section class="main-section" id="Topic_2">
+                    <div class="card border-dark mb-3">
+                        <div class="card-header">Topic 2</div>
+                        <div class="card-body">
+                          <p class="card-text">Another topic about the main topic, for example, if the topic is Java, this could be variables or data types in Java</p>
+                          <p class="card-text"> <code>&lt;p&gt;This would come in a different color and font indicating lines of code&lt;/p&gt;
+                        </code></p>
+                         
+                        </div>
+                      </div>
+                    </section>
+        </main>
        </div>
    </div>
 </div>
+</body>
 </html>
